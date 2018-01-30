@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<h1>欢迎登陆</h1>
+<div class="container">
+    <a href="/customer/add?{{query }}" class="btn btn-success" style="margin-bottom: 5px;">添加</a>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>客户名称</th>
+            <th>客户地址</th>
+            <th>联系人</th>
+            <th>手机号</th>
+        </tr>
+        {% for i in host_list %}
+            <tr>
+                {% for j in i %}
+                    <td>{{ j }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <div class="container-fluid">
+        <nav aria-label="Page navigation" class="pull-right">
+            <ul class="pagination">
+                {{ page_html|safe }}
+            </ul>
+        </nav>
+    </div>
+</div>
+
+</body>
+</html>
