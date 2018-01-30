@@ -1,0 +1,25 @@
+{% for i in result %}
+    {% if i.active %}
+        <div class="menu_chl">
+            {{ i.menu_title }}
+            <div>
+                {% for j in i.children %}
+                    {% if j.active %}
+                        <div class="act"><a href="{{ j.url }}">{{ j.title }}</a></div>
+                    {% else %}
+                        <div><a href="{{ j.url }}">{{ j.title }}</a></div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% else %}
+        <div class="menu_chl">
+            {{ i.menu_title }}
+            <div class="hide">
+                {% for j in i.children %}
+                    <div><a href="{{ j.url }}">{{ j.title }}</a></div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}

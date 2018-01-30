@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    user 页面
+    {% if code.has_add %}
+        <a href="/user/add/">添加</a>
+    {% endif %}
+    {% if code.has_edit %}
+        <a href="/user/edit/1/">编辑</a>
+    {% endif %}
+    {% if code.has_del %}
+        <a href="/user/del/1">删除</a>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% load rbac %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/rbac/rbac.css">
+    <title>Title</title>
+
+</head>
+<body>
+<div class="menu">
+    <p>这里写菜单</p>
+    {% menu_html request %}
+</div>
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+<script src="/static/jquery-3.2.1.min.js"></script>
+<script src="/static/rbac/rbac.js"></script>
+</body>
+</html>

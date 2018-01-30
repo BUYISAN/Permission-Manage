@@ -1,0 +1,19 @@
+.menu {
+    float: left;
+    background-color: cadetblue;
+    width: 20%;
+    height: 700px;
+}
+
+.content {
+    float: left;
+    width: 80%
+}
+
+.hide {
+    display: none;
+}
+
+.act a {
+    color: red;
+}
